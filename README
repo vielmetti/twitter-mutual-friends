@@ -1,0 +1,3 @@
+"Twitter mutual friends" is a set of tools (or perhaps simply documentation for API calls) that shows how to match up two users friends and see what the stream is of their overlapping feeds.
+
+It's mostly experimental now (in the form of one liners and curl commands) awaiting some sense for how useful it is and how on earth to make it go a little faster.
