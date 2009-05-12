@@ -10,3 +10,11 @@ curl http://twitter.com/friends/ids.xml'?'screen_name=$2 > $2.friends.xml
 grep -f $1.friends.xml $2.friends.xml > $1+$2.friends.xml
 
 to generate a list of overlapping friends.
+
+If you're not going to reuse the friends.xml files, here's a version (thanks to @fcw) that
+eliminates temp files and goes faster:
+
+#!/bin/sh
+( curl http://twitter.com/friends/ids.xml'?'screen_name=$1 
+  curl http://twitter.com/friends/ids.xml'?'screen_name=$2 ) |
+sort | uniq -d
