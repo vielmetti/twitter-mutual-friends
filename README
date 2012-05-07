@@ -18,3 +18,5 @@ eliminates temp files and goes faster:
 ( curl http://twitter.com/friends/ids.xml'?'screen_name=$1 
   curl http://twitter.com/friends/ids.xml'?'screen_name=$2 ) |
 sort | uniq -d
+
+Note: this currently generates the error "  <error code="37">Not authorized to use this endpoint</error> "
