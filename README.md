@@ -6,3 +6,9 @@ and this project is closed.
 
 > Python Twitter Tools (PTT) includes a Twitter API, command-line tool, and IRC bot. It is developed by Mike Verdone and the Python Twitter Tools developer team.
 
+```
+#!/bin/sh
+( twitter-follow -o -r $1
+  twitter-follow -o -r $2 ) |
+sort | uniq -d
+```
